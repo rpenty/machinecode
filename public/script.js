@@ -1,9 +1,9 @@
 $(document).ready(function() {
-    setInterval('getUpdates()',500);    
+    setInterval('getUpdates(useFile)',500);    
 });
 
-function getUpdates() {
-	$.getJSON("data.json", function(json) {
+function getUpdates(filename) {
+	$.getJSON(filename, function(json) {
 		squareClear()
 	    squareSet(json, 5);
 	});
